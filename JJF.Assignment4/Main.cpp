@@ -15,14 +15,14 @@ struct Employee {
 
 int main()
 {
-    std::cout << "How many employees would you like to process?: " << "\n";
+    std::cout << "How many employees would you like to process?: ";
     int numEmployees = 0;
     std::cin >> numEmployees;
 
     Employee* employees = new Employee[numEmployees];
     for (int i = 0; i < numEmployees; i++)
     {
-        std::cout << "Enter the ID for Employee " << numEmployees << ": ";
+        std::cout << "\nEnter the ID for Employee " << numEmployees << ": ";
         std::cin >> employees[i].ID;
 
         std::cout << "Enter the First Name for Employee " << numEmployees << ": ";
@@ -36,6 +36,14 @@ int main()
 
         std::cout << "Enter the Hourly Rate for Employee " << numEmployees << ": ";
         std::cin >> employees[i].HourlyRate;
+    }
+
+    std::cout << "\nPay Report";
+    std::cout << "\n----------";
+
+    for (int i = 0; i < numEmployees; i++)
+    {
+        std::cout << "\n" << employees[i].ID << ". " << employees[i].FirstName << " " << employees[i].LastName << ": $" << employees[i].HoursWorked * employees[i].HourlyRate;
     }
 
 	(void)_getch();
