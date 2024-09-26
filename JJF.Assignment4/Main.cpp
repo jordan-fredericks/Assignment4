@@ -6,11 +6,11 @@
 #include <conio.h>
 
 struct Employee {
-    int ID;
+    int ID = 0;
     std::string FirstName;
     std::string LastName;
-    float HoursWorked;
-    float HourlyRate;
+    float HoursWorked = 0;
+    float HourlyRate = 0;
 };
 
 int main()
