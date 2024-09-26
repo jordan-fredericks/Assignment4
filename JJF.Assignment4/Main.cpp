@@ -15,10 +15,12 @@ struct Employee {
 
 int main()
 {
+    // Get the number of employees to create
     std::cout << "How many employees would you like to process?: ";
     int numEmployees = 0;
     std::cin >> numEmployees;
 
+    // Create the array and get the information for each employee
     Employee* employees = new Employee[numEmployees];
     for (int i = 0; i < numEmployees; i++)
     {
@@ -38,6 +40,7 @@ int main()
         std::cin >> employees[i].HourlyRate;
     }
 
+    // Generate the Pay Report
     std::cout << "\nPay Report";
     std::cout << "\n----------";
 
@@ -45,6 +48,14 @@ int main()
     {
         std::cout << "\n" << employees[i].ID << ". " << employees[i].FirstName << " " << employees[i].LastName << ": $" << employees[i].HoursWorked * employees[i].HourlyRate;
     }
+
+    // Calculate and display total pay
+    float totalPay = 0;
+    for (int i = 0; i < numEmployees; i++)
+    {
+        totalPay = totalPay + (employees[i].HoursWorked * employees[i].HourlyRate);
+    }
+    std::cout << "\n\nTotal Pay: $" << totalPay;
 
 	(void)_getch();
 	return 0;
