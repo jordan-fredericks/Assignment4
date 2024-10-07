@@ -24,19 +24,19 @@ int main()
     Employee* employees = new Employee[numEmployees];
     for (int i = 0; i < numEmployees; i++)
     {
-        std::cout << "\nEnter the ID for Employee " << numEmployees << ": ";
+        std::cout << "\nEnter the ID for Employee " << i + 1 << ": ";
         std::cin >> employees[i].ID;
 
-        std::cout << "Enter the First Name for Employee " << numEmployees << ": ";
+        std::cout << "Enter the First Name for Employee " << i + 1 << ": ";
         std::cin >> employees[i].FirstName;
 
-        std::cout << "Enter the Last Name for Employee " << numEmployees << ": ";
+        std::cout << "Enter the Last Name for Employee " << i + 1 << ": ";
         std::cin >> employees[i].LastName;
 
-        std::cout << "Enter the Hours Worked for Employee " << numEmployees << ": ";
+        std::cout << "Enter the Hours Worked for Employee " << i + 1 << ": ";
         std::cin >> employees[i].HoursWorked;
 
-        std::cout << "Enter the Hourly Rate for Employee " << numEmployees << ": ";
+        std::cout << "Enter the Hourly Rate for Employee " << i + 1 << ": ";
         std::cin >> employees[i].HourlyRate;
     }
 
